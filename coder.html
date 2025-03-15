@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <style>
+        *{
+    margin:0;
+    font-family:Arial;
+    border:border-box;
+}
+.navbar{
+    height:60px;
+    background-color: #0f1111;
+    color:white;
+    display:flex;
+    position:sticky;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo{
+    height:50px;
+    width:160px;
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.logo{
+    background-image: url('logo.png');
+    background-size: cover;
+    height:60px;
+    width:100%;
+}
+.border{
+    border:2px solid transparent;
+}
+.border:hover{
+    border:2px solid white;
+}
+.address{
+    height:50px;
+    width:100px;
+    font-size:12px;
+    color:#cccccc;
+    background-color: #0f1111;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.loc{
+    font-size: 14px;
+    position: relative;
+    left:0px;
+    color:white;
+}
+.nav-search{
+    height:60px;
+    width:620px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+#select{
+    background-color: #E6E6E6;
+    text-align:center;
+    font-size: 1rem;
+    height:43px;
+    width:50px;
+    border:none;
+    padding: 0px 0px 0px 5px;
+    border-top-left-radius:4px;
+    border-bottom-left-radius:4px;
+}
+.search_here{
+    height:40px;
+    width:520px;
+    font-size: 1rem;
+    border:none;
+}
+.search_icon{
+    height:43px;
+    width:50px;
+    text-align: center;
+    font-family:Arial,sans-serif;
+    border:none;
+    font-size: 1.3rem;
+    background-color:#febd68;
+    border-top-right-radius:4px;
+    border-bottom-right-radius: 4px;
+}
+.sign-in{
+    height:45px;
+    width:130px;
+    padding-top:10px;
+    font-family: Arial;
+    text-align: center;
+}
+#select1{
+    background-color: #0f1111;
+    color:#E6E6E6;
+    font-size: 14px;
+    border: none;
+    font-weight: 750;
+}
+
+#sign{
+    font-size: 12px;
+    color:#E6E6E6;
+    padding-right:50px;
+}
+#sign1{
+    font-size: 12px;
+    color:#E6E6E6;
+    padding-right:20px;
+}
+
+.cart{
+    height:40px;
+    width: 80px;
+    padding-top:10px;
+    font-weight: 750;
+}
+
+
+.cart i{
+    font-size: 30px;
+}
+
+.panel{
+    height:40px ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#232f3e;
+    color:#FFFFFF;
+}
+.panel-all{
+    height:20px;
+    width:3.5%;
+    position:relative;
+    left:10px;
+    bottom:2px;
+    padding-top:15px;
+    padding-bottom:7px;
+    text-align: center;
+    text-align: top;
+    font-family: Arial;
+    font-size: 14px;
+}
+li {
+    width:30px;
+    list-style-type: none;
+    font-size: 14px;
+    display:inline;
+    padding:8px 9px;
+    padding-top:8px;
+    padding-bottom:8px;
+    font-size:400;
+}
+.panel-ops{
+    width:95%;
+    display:flex;
+    padding-left:6pxpx;
+    justify-content: row;
+}
+
+.hero-section{
+    height:110vh;
+    width:100%;
+    background-image: url("hero.jpg");
+    background-size: cover;
+}
+
+.hero-msg{
+    background-color: #F5F6F6;
+    height:25px;
+    width:90vw;
+    display:flex;
+    padding:10px 14px;
+    color: #0f1111;
+    justify-content: center;
+    align-items:center;
+    font-size:14px;
+    font-family: Arial;
+    position:relative;
+    top:41.5vh;
+    left:4vw;
+}
+#link_to_web{
+    text-decoration: none;
+    color:#007185;
+}
+.shopping-section{
+    display: flex;
+    justify-content: space-between;
+}
+.box1{
+    height:400px;
+    width:330px;
+    display:flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+    background-color:#FFFFFF;
+    padding-right: 25px;
+    position: relative;
+    padding-top:18px;
+    top:43.5vh;
+    left:1vw;
+}
+.bbox1,.bbox2{
+    background-color: #FFFFFF;
+    margin:10px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height:150px;
+    width:330px;
+}
+.title{
+    padding-left:20px;
+    font-size: 21px;
+    font-weight: 700;
+}
+#small-text{
+    color:#007185;
+    padding-left:20px;
+}
+.box2{
+    height:400px;
+    width:330px;
+    display:flex;
+    padding-top:18px;
+    flex-direction: column;
+    background-color:#FFFFFF;
+    padding-right: 25px;
+    position: relative;
+    left:6px;
+    top:43.5vh;
+}
+.box3{
+    height:400px;
+    width:330px;
+    display:flex;
+    padding-top:18px;
+    flex-direction: column;
+    background-color:#FFFFFF;
+    padding-right: 25px;
+    position: relative;
+    right:4px;
+    top:43.5vh;
+}
+.bbox5{
+    padding-top:10px;
+    padding-left:18px;
+}
+#small-text1{
+    color:#007185;
+    padding-left:20px;
+    padding-top:10px;
+}
+.box4{
+    height:400px;
+    width:330px;
+    display:flex;
+    flex-direction: column;
+    background-color:#FFFFFF;
+    position: relative;
+    right:10px;
+    padding-right:23px;
+    padding-top:18px;
+    top:43.5vh;
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+    <div class="navbar">
+        <div class="nav-logo border">
+                <div class="logo"></div>
+        </div>
+
+        <div class="address border">
+                <pre>     Deliver To</pre>
+            <div class="loc">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Location
+            </div>
+        </div>
+
+        <div class="nav-search">
+            <select id="select">
+                <option id="sel">All</option>
+            </select>
+            <input type="text" placeholder="Search Amazon.in" class="search_here">
+            <button class="search_icon"><i class="fa-solid fa-search"></i></button>
+        </div>
+
+        <div class="sign-in border">
+            <p id="sign"><span>Hello, sign in</span></p>
+            <select id="select1">
+                <option><b>Account & Lists</b></option>
+            </select>
+        </div>
+
+        <div class="sign-in border">
+            <p id="sign1"><span>Returns</span></p>
+            <p id="orders" style="font-weight: 750;">& Orders</p>
+        </div>
+
+        <div class="cart border">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Cart
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="panel-all border">
+            <i class="fa-solid fa-bars"></i>
+             All
+        </div>
+
+        <div class="panel-ops">
+            <ul>
+                <li class="border">Today's Deals</li>
+                <li class="border">Customer Service</li>
+                <li class="border">Registry</li>
+                <li class="border">Gift Cards</li>    
+                <li class="border">Sell</li>
+            </ul>
+        </div>
+    </div>
+          </header>
+
+    <div class="hero-section">
+        <div class="hero-msg">
+            You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a href="index.html" id="link_to_web">Click here to go to amazon.in</a>
+        </div>
+        <div class="shopping-section">
+            <div class="box1">
+                <p class="title">Gamming accessories</p>
+                <div class="bbox1">
+                    <div class="bbox">
+                        <img src="https://media.istockphoto.com/id/182776995/photo/headset.jpg?s=612x612&w=0&k=20&c=JiwLaWc7dVPm7JjwxA5PV-CLDjY-Zg6xL4owoyGd9_M=" alt="gaming" width="145px">
+                        <p class="prod_name">Headsets</p>
+                    </div>
+                    <div class="bbox">
+                        <img src="keyb.jpg" alt="gaming" width="145px">
+                        <p class="prod_name">Keyboards</p>
+                    </div>
+                </div>
+                <div2 class="bbox2">
+                    <div class="bbox">
+                        <img src="mouse.jpg" alt="gaming" width="145px">
+                        <p class="prod_name">Computer mice</p>
+                    </div>
+                    <div class="bbox">
+                        <img src="chair.jpg" alt="gaming"  width="145px">
+                        <p class="prod_name">Chairs</p>
+                    </div>
+                </div2>
+                <p id="small-text">See more</p>
+            </div>
+            <div class="box2">
+                <p class="title">Get Your Game On</p>
+                <div class="bbox5">
+                    <img src="gaming.jpg" alt="gaming" height="320px" width="320px">
+                </div>
+                <p id="small-text1">Shop Gaming</p>
+            </div>
+
+            <div class="box3">
+                <p class="title">New year,new supplies </p>
+                <div class="bbox5">
+                    <img src="books.jpg" alt="books" height="320px" width="320px">
+                </div>
+                <p id="small-text1">Shop offline Products</p>
+            </div>
+            <div class="box4">
+                <p class="title">Shop for your home essentials</p>
+                <div class="bbox1">
+                    <div class="bbox">
+                        <img src="home1.jpg" alt="gaming" width="145px">
+                        <p class="prod_name">Cleaning Tools</p>
+                    </div>
+                    <div class="bbox">
+                        <img src="home2.jpg" alt="gaming" width="145px">
+                        <p class="prod_name">Home Storage</p>
+                    </div>
+                </div>
+                <div2 class="bbox2">
+                    <div class="bbox">
+                        <img src="home3.jpg" alt="gaming" width="145px">
+                        <p class="prod_name">Home Decor</p>
+                    </div>
+                    <div class="bbox">
+                        <img src="home4.jpg" alt="gaming"  width="145px">
+                        <p class="prod_name">Bedding</p>
+                    </div>
+                </div2>
+                <p id="small-text">Discover more in Home</p>
+            </div>
+        </div>
+    </div>      
+
+
+</body>
+</html>
